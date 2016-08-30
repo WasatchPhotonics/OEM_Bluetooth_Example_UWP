@@ -1,0 +1,61 @@
+﻿<Page
+    x:Class="OEM_Bluetooth_Example_UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:OEM_Bluetooth_Example_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
+        <!-- Collumns -->
+        <StackPanel Orientation="Horizontal">
+            
+            <!-- Button Panel -->
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="0,50,0,0">
+                    <Button x:Name="buttonConnect" Content="Connect" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Height="50" IsEnabled="False" Click="buttonConnect_Click"/>
+                    <Button x:Name="buttonRefresh" Content="Refresh List" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Height="50" IsEnabled="True" Click="buttonRefresh_Click"/>
+                </StackPanel>
+                <ComboBox x:Name="comboBoxAvailableDevices" PlaceholderText="Select BT Device" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10,10,0,0" Width="310" Height="50" SelectionChanged="comboBoxAvailableDevices_SelectionChanged"/>
+                <MenuFlyoutSeparator Margin="10" />
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="buttonPing" Content="Ping Device" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Height="50" IsEnabled="False" Click="buttonPing_Click"/>
+                    <Button x:Name="buttonAcquire" Content="Acquire Spectrum" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Height="50" IsEnabled="False" Click="buttonAcquire_Click"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="buttonFirmwareRev" Content="Firmware Rev" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Height="50" IsEnabled="False" Click="buttonFirmwareRev_Click"/>
+                    <Button x:Name="buttonFpgaRev" Content="FPGA Rev" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="150" Height="50" IsEnabled="False" Click="buttonFpgaRev_Click"/>
+                </StackPanel>
+                <MenuFlyoutSeparator Margin="10,10,0,0" />
+                <!--
+                <TextBlock x:Name="statusTextBlock" Text="Status: " Margin="10,10,0,0" Width="310" />
+                <TextBox x:Name="status" Margin="10,10,0,0" Background="#FF2EFF00" Width="310" />
+                <TextBlock x:Name="errorTextBlock" Text="Error Status: " Margin="10,10,0,0" Width="310" />
+                <TextBox x:Name="errorStatus" Margin="10,10,0,0" TextWrapping="Wrap" AcceptsReturn="True" Background="#FFD41414" Width="310"  />
+                -->
+            </StackPanel>
+
+            <!-- Output Panel -->
+            <StackPanel Orientation="Vertical">
+                <TextBlock x:Name="outputTextBlock" Text="Output: " Margin="10,60,0,0" Width="630" />
+                <TextBox 
+                    x:Name="outputTextBox" 
+                    Text="" 
+                    Margin="10,10,0,0" 
+                    Width="630" Height="550" 
+                    IsEnabled="True"
+                    IsReadOnly="True"
+                    TextWrapping="Wrap" 
+                    HorizontalAlignment="Stretch" 
+                    
+                    ScrollViewer.VerticalScrollMode="Enabled" 
+                    ScrollViewer.VerticalScrollBarVisibility="Visible" TextChanged="outputTextBox_TextChanged"  />
+            </StackPanel>
+        </StackPanel>
+        
+        
+
+    </Grid>
+</Page>
