@@ -8,7 +8,7 @@ Specific stages and information are printed to the output terminal on the right.
 
 If a specific command or method is unclear, please create an issue on the Issue tab of this repository.
 
-![interface](https://github.com/WasatchPhotonics/CRC8_Example/blob/master/images/interface.PNG)
+![interface](https://github.com/WasatchPhotonics/OEM_Bluetooth_Example_UWP/blob/master/images/interface.PNG)
 
 ## API Documentation
 [A detailed API specification can be found on our WasatchDevice.com website. Just click this link to download a PDF version.](http://wasatchdevices.com/wp-content/uploads/2016/08/OEM-API-Specification.pdf)
